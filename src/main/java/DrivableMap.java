@@ -63,6 +63,16 @@ class DrivableMap {
      *       returns a List containing all of the Tradable items in
      *       drivable_map.
      */
+    public List<Tradable> getTradable() {
+        ArrayList<Tradable> return_list = new ArrayList<>();
+        for (Object key: drivable_map.keySet()) {
+            Object curr_obj = drivable_map.get(key);
+            if (curr_obj instanceof Tradable) {
+                return_list.add((Tradable) curr_obj);
+            }
+        }
+        return ((List<Tradable>) return_list);
+    }
 
 
 
